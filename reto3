@@ -1,0 +1,8 @@
+#reto 3
+1. Primero hay que colocar quien es n o hasta que numero se van a buscar los primos
+2.iniciar desde el 2 debido a que es el primer primo
+3. para cada numero evaluar sus divisores
+4. mirar cuantos divisores tiene  cada numero evaluado
+4.1 si un numero tiene dos divisores = es primo
+4.2 si tiene mas de dos = no es primo
+5. guardar info
