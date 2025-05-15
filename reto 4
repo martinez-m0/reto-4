@@ -1,0 +1,197 @@
+Dado un número entero, determinar si ese número corresponde al código ASCII de una vocal minúscula.
+
+n = int(input("Ingrese un número ENTERO: "))
+
+# aca entonces toca poner cuales son los numeros estos del ascci
+ascii_vocales = [97, 101, 105, 111, 117]
+
+# Como ya estan definidos miramos si el número está en la lista
+if n in ascii_vocales:
+    print("El número " + str(n) + " es una vocal minúscula en ASCII")
+else:
+    print("el numero " + str(n) + " no es una vocal minuscula en ASCCI")
+
+
+print(n)
+
+     
+
+
+Dada una cadena de longitud 1, determine si el código ASCII de primera letra de la cadena es par o no
+
+# Solicitar al usuario que ingrese una sola letra o símbolo
+cadena = input("Ingrese UNA SOLA LETRA O SIMBOLO! (una letra o símbolo): ")
+
+# Ahora verificar que lo que ingresaron sea de longitud 1
+if len(cadena) == 1:
+    # Tomamos el primer (y único) carácter de la cadena ingresada(le pregunté a chatgpt como hacerlo)
+    caracter = cadena[0]
+
+    # Para obtener el código ASCII, usamos la función ord(también le pregunté a chatgpt como hacerlo)
+    codigo_ascii = ord(caracter)
+
+    # Verificamos si el código ASCII es par o impar usando el operador %
+    if codigo_ascii % 2 == 0:  # Si el código ASCII es divisible entre 2 (par)
+        print("El código ASCII del carácter '" + caracter + "' es par")
+    else:
+        print("El código ASCII del carácter '" + caracter + "' es impar")
+
+    # Mostrar el valor ASCII por si lo necesitamos
+    print("El código ASCII es: " + str(codigo_ascii))
+else:
+    print("¡Error! Debes ingresar una cadena de solo un carácter")
+
+
+
+
+
+Dado un carácter, construya un programa en Python para determinar si el carácter es un dígito o no
+
+caracter = input("Ingrese un carácter: ")
+numeros = "0123456789"
+if caracter in numeros:
+    print("El carácter '" + caracter + "' es un dígito")
+else:
+    print("El carácter '" + caracter + "' no es un dígito")
+
+     
+
+
+Realice un programa que lea dos números reales y determine si el primero es múltiplo del segundo
+
+a = float(input("Ingrese el primer número: "))
+b = float(input("Ingrese el segundo número: "))
+ # Verificar si el primer número es múltiplo del segundo
+if a % b == 0:
+    print(str(a) + " es múltiplo de " + str(b))
+elif b % a == 0:
+    print(str(b) + " es múltiplo de " + str(a))
+else:
+    print(str(a) + " no es múltiplo de " + str(b) + " y " + str(b) + " no es múltiplo de " + str(a))
+
+
+     
+
+
+
+Dado un número real x, construya un programa que permita determinar si el número es positivo, negativo o cero
+
+a=float(input("ingrese un numero "))
+if a<0:
+    print("el numero " + str(a) + " es negativo")
+elif a>0:
+    print("el numero " + str(a) + " es positivo")
+else:
+    print("el numero " + str(a) + " es neutro")
+     
+
+
+
+Dado el centro y el radio de un círculo, determinar si un punto de R2 pertenece o no al interior del círculo
+
+x = float(input("Ingrese la coordenada x del centro del círculo: "))
+y = float(input("Ingrese la coordenada y del centro del círculo: "))
+r = float(input("Ingrese el radio del círculo: "))
+x1 = float(input("Ingrese la coordenada x del punto: "))
+y1 = float(input("Ingrese la coordenada y del punto: "))
+if (x1-x)**2 + (y1-y)**2 <= r**2:
+    print("El punto (" + str(x1) + ", " + str(y1) + ") pertenece al interior del círculo")
+else:
+    print("El punto (" + str(x1) + ", " + str(y1) + ") no pertenece al interior del círculo")
+
+     
+
+
+Dadas tres longitudes positivas, determinar si con esas longitudes se puede construir un triángulo
+
+a = float(input("Ingrese la primera longitud: "))
+b = float(input("Ingrese la segunda longitud: "))
+c = float(input("Ingrese la tercera longitud: "))
+if a +b > c and a + c > b and b + c > a:
+  print("es posible construir un triangulo")
+else:
+    print("no se puede hacer un triangulo")
+     
+
+
+
+
+pais: str
+pais = input("Ingrese el nombre de un país de América en minúsculas: ")
+
+match pais:
+    case "costa rica":
+        print("La capital de Costa Rica es San José")
+    case "jamaica":
+        print("La capital de Jamaica es Kingston")
+    case "guatemala":
+        print("La capital de Guatemala es Ciudad de Guatemala")
+    case "cuba":
+        print("La capital de Cuba es La Habana")
+    case "mexico":
+        print("La capital de México es Ciudad de México")
+    case "antigua y barbuda":
+        print("La capital de Antigua y Barbuda es Saint John's")
+    case "venezuela":
+        print("La capital de Venezuela es Caracas")
+    case "barbados":
+        print("La capital de Barbados es Bridgetown")
+    case "paraguay":
+        print("La capital de Paraguay es Asunción")
+    case "panama":
+        print("La capital de Panamá es Ciudad de Panamá")
+    case "granada":
+        print("La capital de Granada es Saint George's")
+    case "guyana":
+        print("La capital de Guyana es Georgetown")
+    case "canada":
+        print("La capital de Canadá es Ottawa")
+    case "surinam":
+        print("La capital de Surinam es Paramaribo")
+    case "brasil":
+        print("La capital de Brasil es Brasilia")
+    case "colombia":
+        print("La capital de Colombia es Bogotá")
+    case "san vicente y las granadinas":
+        print("La capital de San Vicente y las Granadinas es Kingstown")
+    case "republica dominicana":
+        print("La capital de República Dominicana es Santo Domingo")
+    case "haiti":
+        print("La capital de Haití es Puerto Príncipe")
+    case "nicaragua":
+        print("La capital de Nicaragua es Managua")
+    case "chile":
+        print("La capital de Chile es Santiago")
+    case "san cristobal y nieves":
+        print("La capital de San Cristóbal y Nieves es Basseterre")
+    case "uruguay":
+        print("La capital de Uruguay es Montevideo")
+    case "dominica":
+        print("La capital de Dominica es Roseau")
+    case "el salvador":
+        print("La capital de El Salvador es San Salvador")
+    case "argentina":
+        print("La capital de Argentina es Buenos Aires")
+    case "peru":
+        print("La capital de Perú es Lima")
+    case "honduras":
+        print("La capital de Honduras es Tegucigalpa")
+    case "trinidad y tobago":
+        print("La capital de Trinidad y Tobago es Puerto España")
+    case "bahamas":
+        print("La capital de Bahamas es Nasáu")
+    case "santa lucia":
+        print("La capital de Santa Lucía es Castries")
+    case "ecuador":
+        print("La capital de Ecuador es Quito")
+    case "bolivia":
+        print("La capital de Bolivia es Sucre")
+    case "belice":
+        print("La capital de Belice es Belmopán")
+    case "estados unidos":
+        print("La capital de Estados Unidos es Washington D. C.")
+    case _:
+        print("País no encontrado")
+
+
+     
